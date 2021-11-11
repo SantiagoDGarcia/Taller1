@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
     fun listados(){
         var paralelo = listOf(1 to "David Pillco",2 to "Edgar Guamo" ,3 to "Joan Briceño",1 to "Luis Quizhpe",
             2 to "Erick Jaramillo", 3 to "David Salazar", 1 to "Ian Ortega")
-        println("Listado total \n $paralelo")
+        println("Listado total \n ${paralelo.sortedBy { it.second }}")
         //println("Listado de grupos\n  ${paralelo.groupBy{it.first}}")
         println("Por grupos")
         paralelo.sortedBy { it.second }.groupBy{it.first}.forEach{grupo ->
