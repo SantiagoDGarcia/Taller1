@@ -42,8 +42,8 @@ class MainActivity : AppCompatActivity() {
         println("Listado total \n $paralelo")
         //println("Listado de grupos\n  ${paralelo.groupBy{it.first}}")
         println("Por grupos")
-        paralelo.groupBy{it.first}.forEach{grupo ->
-            println( grupo )
+        paralelo.sortedBy { it.second }.groupBy{it.first}.forEach{grupo ->
+            println( grupo)
         }
         println("__________________")
     }
